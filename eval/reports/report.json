@@ -1,0 +1,185 @@
+{
+  "banks": {
+    "dev": {
+      "estates": 10,
+      "systems": 60,
+      "tests_per_week": 6,
+      "silent_failures": 970,
+      "disasters": 65,
+      "status_only": {
+        "mean_days_undetected": 93.3,
+        "found_by_tests": 0,
+        "disaster_restores": 1300,
+        "restored_cleanly": 850,
+        "rpo_breaches": 128,
+        "rto_breaches": 383,
+        "tier1_failed_restores": 110
+      },
+      "random": {
+        "mean_days_undetected": 39.8,
+        "found_by_tests": 611,
+        "disaster_restores": 1300,
+        "restored_cleanly": 1067,
+        "rpo_breaches": 46,
+        "rto_breaches": 202,
+        "tier1_failed_restores": 64
+      },
+      "round_robin": {
+        "mean_days_undetected": 29.5,
+        "found_by_tests": 706,
+        "disaster_restores": 1300,
+        "restored_cleanly": 1116,
+        "rpo_breaches": 37,
+        "rto_breaches": 151,
+        "tier1_failed_restores": 45
+      },
+      "risk": {
+        "mean_days_undetected": 28.1,
+        "found_by_tests": 735,
+        "disaster_restores": 1300,
+        "restored_cleanly": 1139,
+        "rpo_breaches": 40,
+        "rto_breaches": 127,
+        "tier1_failed_restores": 24
+      },
+      "recovery": {
+        "orchestrated": {
+          "tier1_within_rto": 0.619,
+          "median_hours_to_full_recovery": 31.3
+        },
+        "manual": {
+          "tier1_within_rto": 0.106,
+          "median_hours_to_full_recovery": 136.7
+        },
+        "tier1_restores": 310
+      }
+    },
+    "heldout": {
+      "estates": 30,
+      "systems": 60,
+      "tests_per_week": 6,
+      "silent_failures": 2918,
+      "disasters": 187,
+      "status_only": {
+        "mean_days_undetected": 95.3,
+        "found_by_tests": 0,
+        "disaster_restores": 3740,
+        "restored_cleanly": 2434,
+        "rpo_breaches": 397,
+        "rto_breaches": 1056,
+        "tier1_failed_restores": 331
+      },
+      "random": {
+        "mean_days_undetected": 39.8,
+        "found_by_tests": 1829,
+        "disaster_restores": 3740,
+        "restored_cleanly": 3094,
+        "rpo_breaches": 177,
+        "rto_breaches": 505,
+        "tier1_failed_restores": 172
+      },
+      "round_robin": {
+        "mean_days_undetected": 28.8,
+        "found_by_tests": 2134,
+        "disaster_restores": 3740,
+        "restored_cleanly": 3222,
+        "rpo_breaches": 144,
+        "rto_breaches": 389,
+        "tier1_failed_restores": 127
+      },
+      "risk": {
+        "mean_days_undetected": 26.5,
+        "found_by_tests": 2193,
+        "disaster_restores": 3740,
+        "restored_cleanly": 3276,
+        "rpo_breaches": 135,
+        "rto_breaches": 342,
+        "tier1_failed_restores": 80
+      },
+      "recovery": {
+        "orchestrated": {
+          "tier1_within_rto": 0.654,
+          "median_hours_to_full_recovery": 31.9
+        },
+        "manual": {
+          "tier1_within_rto": 0.085,
+          "median_hours_to_full_recovery": 132.9
+        },
+        "tier1_restores": 942
+      }
+    },
+    "different": {
+      "estates": 10,
+      "systems": 120,
+      "tests_per_week": 8,
+      "silent_failures": 1897,
+      "disasters": 58,
+      "status_only": {
+        "mean_days_undetected": 99.5,
+        "found_by_tests": 0,
+        "disaster_restores": 2320,
+        "restored_cleanly": 1577,
+        "rpo_breaches": 412,
+        "rto_breaches": 461,
+        "tier1_failed_restores": 190
+      },
+      "random": {
+        "mean_days_undetected": 52.5,
+        "found_by_tests": 967,
+        "disaster_restores": 2320,
+        "restored_cleanly": 1869,
+        "rpo_breaches": 238,
+        "rto_breaches": 265,
+        "tier1_failed_restores": 123
+      },
+      "round_robin": {
+        "mean_days_undetected": 39.6,
+        "found_by_tests": 1229,
+        "disaster_restores": 2320,
+        "restored_cleanly": 1965,
+        "rpo_breaches": 178,
+        "rto_breaches": 201,
+        "tier1_failed_restores": 86
+      },
+      "risk": {
+        "mean_days_undetected": 39.2,
+        "found_by_tests": 1220,
+        "disaster_restores": 2320,
+        "restored_cleanly": 1947,
+        "rpo_breaches": 202,
+        "rto_breaches": 194,
+        "tier1_failed_restores": 80
+      },
+      "recovery": {
+        "orchestrated": {
+          "tier1_within_rto": 0.557,
+          "median_hours_to_full_recovery": 56.3
+        },
+        "manual": {
+          "tier1_within_rto": 0.065,
+          "median_hours_to_full_recovery": 281.2
+        },
+        "tier1_restores": 582
+      }
+    }
+  },
+  "checks": {
+    "heldout_tier1_failures_vs_status_max": 0.242,
+    "heldout_tier1_failures_vs_round_robin_max": 0.63,
+    "different_tier1_failures_vs_round_robin_max": 0.93,
+    "heldout_tier1_within_rto_min": 0.654
+  },
+  "gate": {
+    "heldout_tier1_failures_vs_status_max": 0.35,
+    "heldout_tier1_failures_vs_round_robin_max": 0.8,
+    "different_tier1_failures_vs_round_robin_max": 1.05,
+    "heldout_tier1_within_rto_min": 0.55
+  },
+  "passed": {
+    "heldout_tier1_failures_vs_status_max": true,
+    "heldout_tier1_failures_vs_round_robin_max": true,
+    "different_tier1_failures_vs_round_robin_max": true,
+    "heldout_tier1_within_rto_min": true
+  },
+  "ok": true
+}
